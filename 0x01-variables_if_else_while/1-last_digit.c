@@ -1,29 +1,35 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
- * main - finds the last interger in random number
+ * main - Entry point
  *
- * Description: The numbers are generated
- * Return: Always(0) Success
+ * Return: Always 0 (Success/correct)
  */
 int main(void)
+
 {
-	int n, lastInt;
+int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
+srand(time(0));
+n = rand() - RAND_MAX / 2;
 
-	lastInt = n % 10;
 
-	if (lastInt == 0)
-		printf("Last digit of %d is %d and is 0\n", n, lastInt);
-	else if (lastInt < 6 && lastInt != 0)
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastInt);
-	else if (lastInt > 5)
-		printf("Last Digit of %d is %d and is greater than 5\n", n, lastInt);
-
-	return (0);
+if (n % 10 > 5)
+{
+printf("Last digit of %i is %i and is greater than 5\n", n, n % 10);
 }
 
+else if (n % 10 == 0)
+{
+printf("Last digit of %i is %i and is 0\n", n, n % 10);
+}
+
+else
+{
+printf("Last digit of %i is %i and is less than 6 and not 0\n", n, n % 10);
+}
+
+
+return (0);
+}
