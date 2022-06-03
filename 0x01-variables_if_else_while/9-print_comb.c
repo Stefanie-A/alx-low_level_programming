@@ -1,4 +1,3 @@
-ble File  23 lines (21 sloc)  321 Bytes
 #include <stdio.h>
 /**
  * main - Print single digit numbers
